@@ -1,0 +1,99 @@
+/* Setting the box sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Setting the values for the background colors */
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+/* Centering the quiz, and setting the background color */
+body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+/* Setting the class for background color for correct choice */
+body.correct {
+    --hue: var(--hue-correct);
+}
+
+/* Setting the class for background color for the correct choice */
+body.wrong {
+    --hue: var(--hue-wrong);
+}
+
+/* Added styling for the container that holds the quiz */
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 3px;
+}
+
+/* Adding styling to the buttons */
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Added styling to all "btn" classes */
+.btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+
+/* Added a border upon "mouse hover over" */
+.btn:hover {
+    border-color: black;
+}
+
+/* Setting the styling for the correct button */
+.btn.correct {
+--hue: var(--hue-correct);
+color: black;
+}
+
+/* Setting the styling for the wrong button */
+.btn.wrong {
+    --hue: var(--hue-wrong);
+}
+
+/* Styling the "start" and "next" buttons */
+.start-btn, .next-btn {
+font-size: 1.5rem;
+font-weight: bold;
+padding: 10px 20px;
+}
+
+/* Stying the control buttons */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  */
+.hide {
+    display: none;
+}
